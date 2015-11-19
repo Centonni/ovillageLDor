@@ -1,0 +1,104 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myLivreDorLabel" translate="ovillageLDorApp.livreDor.home.createOrEditLabel">Create or edit a LivreDor</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="livreDor.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.message" for="field_message">Message</label>
+            <input type="text" class="form-control" name="message" id="field_message"
+                    ng-model="livreDor.message"
+                    required />
+            <div ng-show="editForm.message.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.message.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.nomVisiteur" for="field_nomVisiteur">NomVisiteur</label>
+            <input type="text" class="form-control" name="nomVisiteur" id="field_nomVisiteur"
+                    ng-model="livreDor.nomVisiteur"
+                    required />
+            <div ng-show="editForm.nomVisiteur.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nomVisiteur.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.prenomVisiteur" for="field_prenomVisiteur">PrenomVisiteur</label>
+            <input type="text" class="form-control" name="prenomVisiteur" id="field_prenomVisiteur"
+                    ng-model="livreDor.prenomVisiteur"
+                    required />
+            <div ng-show="editForm.prenomVisiteur.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.prenomVisiteur.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.contact" for="field_contact">Contact</label>
+            <input type="text" class="form-control" name="contact" id="field_contact"
+                    ng-model="livreDor.contact"
+                    required />
+            <div ng-show="editForm.contact.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.contact.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.twitter" for="field_twitter">Twitter</label>
+            <input type="text" class="form-control" name="twitter" id="field_twitter"
+                    ng-model="livreDor.twitter"
+                     />
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.mail" for="field_mail">Mail</label>
+            <input type="text" class="form-control" name="mail" id="field_mail"
+                    ng-model="livreDor.mail"
+                     />
+        </div>
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.dateVisite" for="field_dateVisite">DateVisite</label>
+            <input type="date" class="form-control" name="dateVisite" id="field_dateVisite"
+                    ng-model="livreDor.dateVisite"
+                    required />
+            <div ng-show="editForm.dateVisite.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.dateVisite.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="ovillageLDorApp.livreDor.dignitaire" for="field_dignitaire">dignitaire</label>
+            <select class="form-control" id="field_dignitaire" name="dignitaire" ng-model="livreDor.dignitaire" ng-options="user as user.lastName for user in users track by user.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

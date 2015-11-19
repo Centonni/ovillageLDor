@@ -1,0 +1,66 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "dignitaire",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "lastName"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "message",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "nomVisiteur",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "prenomVisiteur",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "contact",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "twitter",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "mail",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "dateVisite",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20151119182721",
+    "dto": "no",
+    "pagination": "no"
+}

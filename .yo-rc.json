@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "ovillageLDor",
+    "packageName": "ci.ovillage.ldor",
+    "packageFolder": "ci/ovillage/ldor",
+    "authenticationType": "xauth",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "hazelcast",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "0dfd4f6d7002d3d10fe1d371dcf16ca27ced092b",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

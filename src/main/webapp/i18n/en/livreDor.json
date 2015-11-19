@@ -1,0 +1,28 @@
+{
+    "ovillageLDorApp": {
+        "livreDor" : {
+            "home": {
+                "title": "LivreDors",
+                "createLabel": "Create a new LivreDor",
+                "createOrEditLabel": "Create or edit a LivreDor"
+            },
+            "created": "A new LivreDor is created with identifier {{ param }}",
+            "updated": "A LivreDor is updated with identifier {{ param }}",
+            "deleted": "A LivreDor is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete LivreDor {{ id }}?"
+            },
+            "detail": {
+                "title": "LivreDor"
+            },
+            "message": "Message",
+            "nomVisiteur": "NomVisiteur",
+            "prenomVisiteur": "PrenomVisiteur",
+            "contact": "Contact",
+            "twitter": "Twitter",
+            "mail": "Mail",
+            "dateVisite": "DateVisite",
+            "dignitaire": "Dignitaire"
+        }
+    }
+}
